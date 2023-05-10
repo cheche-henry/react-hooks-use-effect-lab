@@ -19,6 +19,12 @@ function App() {
     }
   }
 
+  function resetQuiz() {
+    setQuestions(quiz);
+    setCurrentQuestion(1);
+    setScore(0);
+  }
+
   return (
     <main>
       <section>
@@ -31,6 +37,7 @@ function App() {
           <>
             <h1>Game Over</h1>
             <h2>Total Correct: {score}</h2>
+            <button onClick={resetQuiz}>Reset Quiz</button>
           </>
         )}
       </section>
